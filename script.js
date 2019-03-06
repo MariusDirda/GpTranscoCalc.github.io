@@ -231,7 +231,7 @@ function count() {
 //function to sepparate number with commas
   function commaSeparateNumber(val) {
     while (/(\d+)(\d{3})/.test(val.toString())) {
-  val =  val.toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+      val = val.toString().replace(/(\d+)(\d{3})/, '$1,$2');
     }
     return val;
   }
