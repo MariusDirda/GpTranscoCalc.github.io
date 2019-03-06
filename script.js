@@ -190,8 +190,6 @@ function calculationFunction() {
     centsTemp = 0.5;
   }
 
-var cents =
-
 
   resultAnnual = (userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles) + (1 * temp) //formula to count annual salary
   resultWeakly = (userInputMiles * 0.5) + (0.03 * userInputMiles) //formula to count weakly salary

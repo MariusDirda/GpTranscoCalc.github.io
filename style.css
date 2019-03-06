@@ -360,7 +360,7 @@ padding-top: 15px !important;
 }
 
 body {
-  overflow: hidden;
+  overflow-y: hidden;
   -moz-transform-origin: 0 0;
   left: 0;
   font-family: 'AvenirMedium' !important;
