@@ -454,7 +454,7 @@ input[type="radio"]:checked {
 
 .average {
   padding-top: 10px;
-  padding-left: 15px;
+  padding-left: 30px;
   font-size: 20px !important;
 }
 
@@ -470,9 +470,9 @@ select::-ms-expand {
 }
 
 .image {
-  margin-top: 10px;
-  margin-left: -10px;
-  height: 50px;
+  margin-top: 13px;
+  margin-left: -15px;
+  height: 45px;
   width: auto ;
 }
 
