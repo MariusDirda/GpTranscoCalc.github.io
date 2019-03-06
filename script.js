@@ -138,7 +138,7 @@ function check() {
 
     var eventListen = eventListen || window.event;
 
-    if (eventListen.which == 13 && milesInput < 2500 != milesInput > 20000) {
+    if (eventListen.which == 13 && milesInput < 2000 != milesInput > 3000) {
       hiddenAlert.style.display = "block";
       return false;
     } else if (eventListen.which == 13) {
@@ -156,7 +156,7 @@ function check() {
   document.getElementById("submitButton").onclick = function() {
     var milesInput = document.getElementById('miles').value;
     var hiddenAlert = document.getElementById("hide");
-    if (milesInput < 2500 != milesInput > 20000) {
+    if (milesInput < 2000 != milesInput > 3000) {
 
       hiddenAlert.style.display = "block";
       return false;
@@ -183,15 +183,20 @@ function calculationFunction() {
   //radio buttons output
   if (document.getElementById('radioChecked').checked) {
     temp = 400;
+    centsTemp = 0.53;
 
   } else if (document.getElementById('radioUnchecked').checked) {
     temp = 0;
+    centsTemp = 0.5;
   }
 
-  resultAnnual = (userInputMiles * 52 * 0.5) + (0.03 * 52 * userInputMiles) + (1 * temp) //formula to count annual salary
+var cents =
+
+
+  resultAnnual = (userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles) + (1 * temp) //formula to count annual salary
   resultWeakly = (userInputMiles * 0.5) + (0.03 * userInputMiles) //formula to count weakly salary
 
-  document.getElementById("cent").innerHTML = 51.5;
+  document.getElementById("cent").innerHTML = (centsTemp*100);
 
   document.getElementById("resultWeeks").innerHTML = resultWeakly; // weakly result output to html
 
