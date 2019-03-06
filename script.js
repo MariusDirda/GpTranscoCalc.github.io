@@ -12,7 +12,7 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-
+    //column options
     [
       'Salary',
       'USD', {
@@ -22,20 +22,21 @@ function drawChart() {
       }
     ],
     [
-      "Your salary", tempResult, '#23548f', tempResult
+      "Your salary", tempResult, '#23548f', tempResult //annotation text, annual salary variable, color,annual salary variable
     ],
     [
-      "Average salary", 66711, '#5c5c5c', '66711'
+      "Average salary", 66711, '#5c5c5c', '66711' //annotion text, current annual average, color, current annual evarage
     ]
   ]);
 
-  var formatter = new google.visualization.NumberFormat({
+  var formatter = new google.visualization.NumberFormat({ // formatter for number type
     prefix: '$',
     patern: 'short'
   });
   formatter.format(data, 1);
   formatter.format(data, 3);
 
+  //calculation for annotations to apear on top of collumns
   var maxV = 0;
   for (var i = 0; i < data.getNumberOfRows(); i++) {
     if (data.getValue(i, 1) > maxV) {
@@ -62,17 +63,17 @@ function drawChart() {
       trigger: 'none'
     },
 
-    width: 250,
-    height: 450,
+    width: 250, //chart width
+    height: 450, //chart height
 
     legend: 'none',
     bar: {
-      groupWidth: '75%'
+      groupWidth: '75%' //space beetwen columns
     },
 
     hAxis: {
 
-      format: ['currency'],
+      format: ['currency'], // the type of numbers used
       textPosition: 'none'
     },
 
@@ -81,29 +82,29 @@ function drawChart() {
         max: maxV, //maximum value of annotations + 1
       },
       textStyle: {
-        fontSize: 22
+        fontSize: 22 // chart font size
       },
 
       ticks: [
-        40000, 80000, 100000
+        40000, 80000, 100000 //chart baselines
       ],
       textPosition: 'none'
     },
 
-    chartArea: {
+    chartArea: { //chart area options, where chart is
       'height': '100%',
       left: 0,
       right: 0,
       top: 70
     },
 
-    animation: {
+    animation: { //chart animation options
       startup: true,
       duration: 900,
       easing: 'out'
     },
 
-    annotations: {
+    annotations: { //chart annotation options
       highContrast: false,
       textStyle: {
         color: '#5c5c5c',
@@ -130,6 +131,7 @@ function drawChart() {
 // function to check if input is correct
 function check() {
 
+  //checking if valid number entered on enter button
   $("#miles").keypress(function(eventListen) {
     var milesInput = document.getElementById('miles').value;
     var hiddenAlert = document.getElementById("hide");
@@ -150,7 +152,7 @@ function check() {
 
   });
 
-
+  //checking if valid number entered on button click
   document.getElementById("submitButton").onclick = function() {
     var milesInput = document.getElementById('miles').value;
     var hiddenAlert = document.getElementById("hide");
@@ -176,8 +178,9 @@ function check() {
 // function to calculate input
 function calculationFunction() {
 
-  var userInputMiles = document.getElementById("miles").value;
+  var userInputMiles = document.getElementById("miles").value; //getting values from input
 
+  //radio buttons output
   if (document.getElementById('radioChecked').checked) {
     temp = 400;
 
@@ -185,18 +188,16 @@ function calculationFunction() {
     temp = 0;
   }
 
-  resultAnnual = (userInputMiles * 52 * 0.5) + (0.03 * 52 * userInputMiles) + (1 * temp)
-  resultWeakly = (userInputMiles * 0.5) + (0.03 * userInputMiles)
+  resultAnnual = (userInputMiles * 52 * 0.5) + (0.03 * 52 * userInputMiles) + (1 * temp) //formula to count annual salary
+  resultWeakly = (userInputMiles * 0.5) + (0.03 * userInputMiles) //formula to count weakly salary
 
   document.getElementById("cent").innerHTML = 51.5;
 
-  document.getElementById("resultWeeks").innerHTML = resultWeakly;
+  document.getElementById("resultWeeks").innerHTML = resultWeakly; // weakly result output to html
 
-  tempResult2 = 0 + resultWeakly;
+  document.getElementById("resultAnnual").innerHTML = resultAnnual; // annual result output to html
 
-  document.getElementById("resultAnnual").innerHTML = resultAnnual;
-
-  tempResult = 0 + resultAnnual;
+  tempResult = 0 + resultAnnual; //temporary result  for chart
 
   drawChart();
 
@@ -221,7 +222,7 @@ function count() {
 
     $(this).prop('Counter', 0).animate({
       Counter: $(this).text()
-    }, {
+    }, { //counter animation options
       duration: 1000,
       easing: 'swing',
 
@@ -235,7 +236,9 @@ function count() {
   //function to sepparate number with commas
   function commaSeparateNumber(val) {
 
-    val = Math.round(val * 100) / 100;
+
+
+    val = Math.round(val * 100) / 100; //decimal options, for 1 decimal write 10 instead of 100
 
     while (/(\d+)(\d{3})/.test(val.toString())) {
       val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
