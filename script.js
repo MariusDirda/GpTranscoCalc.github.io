@@ -42,7 +42,7 @@ function drawChart() {
       maxV = data.getValue(i, 1);
     }
   }
-  maxV += maxV / 3;
+  maxV += maxV / 10;
 
 
   var view = new google.visualization.DataView(data);
@@ -77,13 +77,15 @@ function drawChart() {
     },
 
     vAxis: {
-
+      viewWindow:{
+                max: maxV, //maximum value of annotations + 1
+            },
       textStyle: {
         fontSize: 22
       },
 
       ticks: [
-        40000, 80000, 100000
+        40000,80000, 100000
       ],
       textPosition: 'none'
     },
@@ -131,9 +133,9 @@ function check() {
     var milesInput = document.getElementById('miles').value;
     var hiddenAlert = document.getElementById("hide");
 
-  var keycode = event.keyCode || event.charCode || event.charCode;
+  var keycode = event.keyCode || event.charCode || event.which || event.key;
 
-    if (keycode == 13 && milesInput < 2500 != milesInput > 20000) {
+    if (keycode === 13 && milesInput < 2500 != milesInput > 20000) {
       hiddenAlert.style.display = "block";
       return false;
     } else if (keycode == 13) {
