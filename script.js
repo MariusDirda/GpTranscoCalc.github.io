@@ -221,18 +221,20 @@ function count() {
       easing: 'swing',
 
     step: function(now) {
-          $(this).text(commaSeparateNumber(Math.ceil(now)));
-        },
-
+          $(this).text(commaSeparateNumber(now));
+        }
     });
   });
 
 
 //function to sepparate number with commas
   function commaSeparateNumber(val) {
-    while (/(\d+)(\d{3})/.test(val.toString())) {
-      val = val.toString().replace(/(\d+)(\d{3})/, '$1,$2');
-    }
-    return val;
+
+    val = Math.round(val * 10) / 10;
+
+   while (/(\d+)(\d{3})/.test(val.toString())){
+     val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+   }
+   return val;
   }
 }
