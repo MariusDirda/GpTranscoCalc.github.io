@@ -129,16 +129,17 @@ function drawChart() {
 
 // function to check if input is correct
 function check() {
-  document.getElementById('miles').onkeypress = function() {
+
+$("#miles").keypress(function (eventListen){
     var milesInput = document.getElementById('miles').value;
     var hiddenAlert = document.getElementById("hide");
 
-  var keycode = event.keyCode || event.charCode || event.which || event.key;
+var eventListen = eventListen|| window.event;
 
-    if (keycode === 13 && milesInput < 2500 != milesInput > 20000) {
+    if (eventListen.which == 13 && milesInput < 2500 != milesInput > 20000) {
       hiddenAlert.style.display = "block";
       return false;
-    } else if (keycode == 13) {
+    } else if (eventListen.which == 13) {
       hiddenAlert.style.display = "none";
       calculationFunction();
       count();
@@ -147,7 +148,7 @@ function check() {
 
     }
 
-  }
+  });
 
 
   document.getElementById("submitButton").onclick = function() {
