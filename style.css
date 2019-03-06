@@ -21,21 +21,34 @@ strong, b {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 823px) and (orientation: landscape) {
+  .zoomAll{
+
+    zoom:210% !important;
+
+  }
   .mid {
-    padding-left: 180px !important;
     margin: auto;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 823px) and (orientation: landscape) {
+
+
   .container {
     margin: auto !important;
     justify-content: center;
     flex-direction: column !important;
   }
 
+.zoomAll{
+
+    zoom:170%;
+
+
+}
   .mid {
-    padding-left: 100px;
+
+    padding-left: 0px;
   }
 
   .image {
@@ -305,7 +318,7 @@ strong, b {
 }
 
 .textMargin {
-  margin-left: -30px;
+  margin-left: -10px;
   margin-right: 20px;
   width: 200px !important;
 }
@@ -546,6 +559,7 @@ select::-ms-expand {
   align-content: center;
   width: 100% !important;
 }
+
 
 .textPD {
   display: flex;
