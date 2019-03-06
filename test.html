@@ -1,0 +1,130 @@
+<div class="container">
+  <div class="row flex-wrap flex-md-nowrap">
+    <div class=" col-lg-4 ">
+      <div class="mid">
+        <div id="driveMiles" class="textPD row  justify-content-center textMargin2">How many miles would you like to drive each week?</div>
+        <span class="milesLabel selectTextColor   justify-content-center">
+          Miles</span>
+        <div class="row  justify-content-center textMargin2">
+          <input type="number" name="miles-input" id="miles" value="3000" />
+        </div>
+        <div id="hide" class="" role="alert">
+          Please enter number between 2500 and 20000
+        </div>
+
+
+
+        <div class="textPD row  justify-content-center textMargin2">How many days would you like to drive in a week? </div>
+
+        <span class="selectInput selectTextColor selectText ">
+          Days</span>
+        <div class="row  justify-content-center textMargin2">
+          <select name="radio-button" class="select_join ">
+            <option value="1" class="selectTextColor">4</option>
+            <option value="2" class="selectTextColor" selected="selected">5</option>
+            <option value="3" class="selectTextColor">6</option>
+          </select>
+        </div>
+
+        <div class="textPD row justify-content-start textPD textMargin3">Would you be able to get clean DOT2 inspections and no accidents after 1st year?</div>
+      </div>
+      <div class="RadioButtons row justify-content-center">
+
+        <div><input type="radio" name="DOT" id="radioChecked" checked="checked"></div>
+        <div class="DOT radioSpace">Yes</div>
+        <div><input type="radio" name="DOT" id="radioUnchecked"></div>
+        <div class="DOT"> No</div>
+      </div>
+      <div class="row justify-content-center">
+        <input type="button" name="submit" id="submitButton" value="CALCULATE" />
+      </div>
+
+    </div>
+
+
+
+    <hr class="hr ">
+
+    <div class=" col-lg-3">
+      <div class="counting">
+        <div class="row justify-content-center" id="scrollHere">
+          <span class="textPD textMargin">
+
+            Your early salary at GP Transco is:
+          </span>
+        </div>
+        <div class="row justify-content-center">
+          <span class="salaryNumbers salaryNumbersText">$
+            <b> <span class="counter" name="res" id="resultAnnual">0</span></b>
+          </span>
+
+        </div>
+
+        <div class="row justify-content-center">
+          <span class="textPD textMargin">
+
+            Your pay per mile at GP Transco is:
+          </span>
+        </div>
+
+        <div class="row justify-content-center">
+          <span class="salaryNumbers salaryNumbersText ">
+            <b><span class="counter" id="cent" style="margin-right:10px;">0</span></b>
+            cents/mile
+          </span>
+        </div>
+
+        <div class="row justify-content-center">
+          <span class=" textPD textMargin">
+
+            Your weekly pay at GP Transco is:
+          </span>
+
+        </div>
+        <div class="row justify-content-center">
+          <span class="salaryNumbers salaryNumbersText">$
+            <b> <span class="counter third" id="resultWeeks">0<span></span></b>
+        </div>
+      </div>
+    </div>
+
+
+
+    <hr align="right" class="hr">
+
+    <div class=" col-lg-3">
+
+      <div class="row justify-content-center">
+        <div class="textPD textLets justify-content-center">Let's compare</div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div id="columnchart"></div>
+      </div>
+
+
+      <div class="row justify-content-center">
+        <img class="image" src="https://application.gptransco.com/GP_logo.png">
+        <span class="average">
+          National
+          <br>
+          Average
+        </span>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+</div>
+
+<style>
+
+</style>
+
+<style>
+
+</style>
