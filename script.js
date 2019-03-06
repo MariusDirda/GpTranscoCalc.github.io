@@ -1,9 +1,14 @@
-var tempResult = 0;
+var tempResult = 0; //temporary variable for outputing 0
+
+//settings for google chart
 google.charts.load('current', {
   packages: ['corechart'],
   'language': 'us'
 });
 google.charts.setOnLoadCallback(drawChart);
+
+
+//google chart function
 
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
@@ -49,6 +54,8 @@ function drawChart() {
   }, ]);
 
 
+
+//google chart options
   var options = {
 
     'tooltip': {
@@ -118,7 +125,7 @@ function drawChart() {
 
 
 
-
+// function to check if input is correct
 function check() {
   document.getElementById('miles').onkeypress = function() {
 
@@ -160,6 +167,8 @@ function check() {
 
 }
 
+
+// function to calculate input
 function calculationFunction() {
 
   var userInputMiles = document.getElementById("miles").value;
@@ -191,13 +200,15 @@ function calculationFunction() {
 }
 
 
-
+//function so scroll to result
 function scroll() {
   $('html, body').animate({
     scrollTop: ($('#scrollHere').offset().top)
   }, 500);
 }
 
+
+//function to animate number count
 function count() {
   $('.counter').each(function() {
 
@@ -216,9 +227,11 @@ function count() {
     });
   });
 
+
+//function to sepparate number with commas
   function commaSeparateNumber(val) {
     while (/(\d+)(\d{3})/.test(val.toString())) {
-      val = val.toString().replace(/(\d+)(\d{3})/, '$1,$2');
+  val =  val.toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     }
     return val;
   }
