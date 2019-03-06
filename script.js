@@ -55,7 +55,7 @@ function drawChart() {
 
 
 
-//google chart options
+  //google chart options
   var options = {
 
     'tooltip': {
@@ -77,15 +77,15 @@ function drawChart() {
     },
 
     vAxis: {
-      viewWindow:{
-                max: maxV, //maximum value of annotations + 1
-            },
+      viewWindow: {
+        max: maxV, //maximum value of annotations + 1
+      },
       textStyle: {
         fontSize: 22
       },
 
       ticks: [
-        40000,80000, 100000
+        40000, 80000, 100000
       ],
       textPosition: 'none'
     },
@@ -130,11 +130,11 @@ function drawChart() {
 // function to check if input is correct
 function check() {
 
-$("#miles").keypress(function (eventListen){
+  $("#miles").keypress(function(eventListen) {
     var milesInput = document.getElementById('miles').value;
     var hiddenAlert = document.getElementById("hide");
 
-var eventListen = eventListen|| window.event;
+    var eventListen = eventListen || window.event;
 
     if (eventListen.which == 13 && milesInput < 2500 != milesInput > 20000) {
       hiddenAlert.style.display = "block";
@@ -225,21 +225,21 @@ function count() {
       duration: 1000,
       easing: 'swing',
 
-    step: function(now) {
-          $(this).text(commaSeparateNumber(now));
-        }
+      step: function(now) {
+        $(this).text(commaSeparateNumber(now));
+      }
     });
   });
 
 
-//function to sepparate number with commas
+  //function to sepparate number with commas
   function commaSeparateNumber(val) {
 
     val = Math.round(val * 100) / 100;
 
-   while (/(\d+)(\d{3})/.test(val.toString())){
-     val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-   }
-   return val;
+    while (/(\d+)(\d{3})/.test(val.toString())) {
+      val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    }
+    return val;
   }
 }
