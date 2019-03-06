@@ -42,7 +42,7 @@ function drawChart() {
       maxV = data.getValue(i, 1);
     }
   }
-  maxV += maxV / 5;
+  maxV += maxV / 3;
 
 
   var view = new google.visualization.DataView(data);
@@ -128,13 +128,15 @@ function drawChart() {
 // function to check if input is correct
 function check() {
   document.getElementById('miles').onkeypress = function() {
-
     var milesInput = document.getElementById('miles').value;
     var hiddenAlert = document.getElementById("hide");
-    if (event.keyCode == 13 && milesInput < 2500 != milesInput > 20000) {
+
+  var keycode = event.keyCode || event.charCode || event.charCode;
+
+    if (keycode == 13 && milesInput < 2500 != milesInput > 20000) {
       hiddenAlert.style.display = "block";
       return false;
-    } else if (event.keyCode == 13) {
+    } else if (keycode == 13) {
       hiddenAlert.style.display = "none";
       calculationFunction();
       count();
