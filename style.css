@@ -40,15 +40,15 @@ strong, b {
   }
 
   .selectInput {
-    margin-left: 25px;
+    margin-left: 50px;
   }
 
   .milesLabel {
-    margin-left: 25px;
+    margin-left: 50px;
   }
 
   body {
-    overflow-y: hidden !important;
+    overflow-y: scroll !important;
   }
 
   #miles {
@@ -61,12 +61,12 @@ strong, b {
 
   .textMargin2 {
     width: 80% !important;
-    margin-left: 7px !important;
+    margin-left: 35px !important;
   }
 
   .textMargin3 {
     width: 80% !important;
-    margin-left: 7px !important;
+    margin-left: 35px !important;
   }
 
   .container {
@@ -76,7 +76,9 @@ strong, b {
   }
 
   .zoomAll {
-    zoom: 190%;
+    /* -moz-transform-origin: 0 0;
+    -moz-transform: scale(1.9);
+    zoom: 190%; */
   }
 
   .mid {

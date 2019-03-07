@@ -235,13 +235,8 @@ function scroll() {
       scrollTop: ($('#scrollHere').offset().top)
     }, 500);
   } else if ($(window).height() <= 500) {
+}
 
-    $('html, body').animate({
-      scrollTop: ('1420px')
-    }, 500);
-
-
-  }
 
 
   return false;
