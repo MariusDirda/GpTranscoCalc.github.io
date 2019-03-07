@@ -147,7 +147,7 @@ justify-content: center !important;
   }
 
   .textMargin {
-    width: 180px !important;
+    width: 80% !important;
     margin-left: -20px !important
   }
 
@@ -193,9 +193,7 @@ justify-content: center !important;
     padding-bottom: 10px !important;
   }
 
-  .styling {
-    padding-left: 20px;
-  }
+
 
   .textMargin {
     width: 180px;
@@ -228,6 +226,32 @@ margin-left: -30px !important;
     padding-left: 20px;
   }
 
+  #miles {
+    width: 80% !important;
+  }
+
+  .select_join {
+    width: 80% !important;
+  }
+
+
+  .textMargin2 {
+    width: 80% !important;
+    padding-left: 13px !important;
+  }
+
+  .textMargin3 {
+    width:80% !important;
+    padding-left: 15px !important;
+  }
+
+  .textMargin {
+    width: 80% !important;
+    margin-left: -20px !important
+  }
+
+
+
   .image {
     margin-left: -20px !important;
     padding-top: -10px;
@@ -245,9 +269,7 @@ margin-left: -30px !important;
     align-items: center !important;
   }
 
-  .styling {
-    padding-left: 30px;
-  }
+
 
   .container {
     margin: auto;
@@ -259,7 +281,7 @@ margin-left: -30px !important;
   }
 
   .textMargin {
-    width: 180px;
+    width: 80% !important;
     margin-left: -30px !important
   }
 
