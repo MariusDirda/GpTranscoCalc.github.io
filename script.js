@@ -1,5 +1,6 @@
 var tempResult = 0; //temporary variable for outputing 0
 
+var zero = "???";
 //settings for google chart
 google.charts.load('current', {
   packages: ['corechart'],
@@ -22,7 +23,7 @@ function drawChart() {
       }
     ],
     [
-      "Your salary", tempResult, '#23548f', tempResult //annotation text, annual salary variable, color,annual salary variable
+      "Your salary", tempResult, '#23548f', zero //annotation text, annual salary variable, color,annual salary variable
     ],
     [
       "Average salary", 66711, '#5c5c5c', '66711' //annotion text, current annual average, color, current annual evarage
@@ -31,7 +32,8 @@ function drawChart() {
 
   var formatter = new google.visualization.NumberFormat({ // formatter for number type
     prefix: '$',
-    patern: 'short'
+    patern: 'short',
+    fractionDigits :'0'
   });
   formatter.format(data, 1);
   formatter.format(data, 3);
@@ -72,12 +74,13 @@ function drawChart() {
     },
 
     hAxis: {
-
-      format: ['currency'], // the type of numbers used
+      format: ['0.00'], // the type of numbers used
       textPosition: 'none'
     },
 
     vAxis: {
+
+      fractionDigits:['0'],
       viewWindow: {
         max: maxV, //maximum value of annotations + 1
       },
@@ -138,7 +141,7 @@ function check() {
 
     var eventListen = eventListen || window.event;
 
-    if (eventListen.which == 13 && milesInput < 2000 != milesInput > 3000) {
+    if (eventListen.which == 13 && milesInput < 2000 != milesInput > 3300) {
       hiddenAlert.style.display = "block";
       return false;
     } else if (eventListen.which == 13) {
@@ -156,7 +159,7 @@ function check() {
   document.getElementById("submitButton").onclick = function() {
     var milesInput = document.getElementById('miles').value;
     var hiddenAlert = document.getElementById("hide");
-    if (milesInput < 2000 != milesInput > 3000) {
+    if (milesInput < 2000 != milesInput > 3300) {
 
       hiddenAlert.style.display = "block";
       return false;
@@ -202,6 +205,8 @@ function calculationFunction() {
 
   tempResult = 0 + resultAnnual; //temporary result  for chart
 
+zero = tempResult;
+
   drawChart();
 
 
@@ -230,7 +235,7 @@ function count() {
       easing: 'swing',
 
       step: function(now) {
-        $(this).text(commaSeparateNumber(now));
+        $(this).text(commaSeparateNumber(Math.ceil(now)));
       }
     });
   });
@@ -239,13 +244,8 @@ function count() {
   //function to sepparate number with commas
   function commaSeparateNumber(val) {
 
-
-
-    val = Math.round(val * 100) / 100; //decimal options, for 1 decimal write 10 instead of 100
-
     while (/(\d+)(\d{3})/.test(val.toString())) {
-      val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-    }
-    return val;
-  }
-}
+        val = val.toString().replace(/(\d+)(\d{3})/, '$1,$2');
+      }
+      return val;
+}}
