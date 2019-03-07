@@ -215,11 +215,17 @@ zero = tempResult;
 
 
 //function so scroll to result
+
+
+
+
 function scroll() {
+
+  if (  $(window).width() <= 500){
   $('html, body').animate({
     scrollTop: ($('#scrollHere').offset().top)
-  }, 500);
-}
+  }, 500);}}
+
 
 
 //function to animate number count

@@ -81,6 +81,11 @@ margin-left:-30px !important;
 }
 
 @media only screen and (max-width: 320px) and (orientation: portrait) {
+  .mid {
+
+justify-content: center !important;
+
+  }
   .image {
     padding-left: 20px !important;
     margin-top: 10px;
@@ -95,15 +100,13 @@ margin-left:-30px !important;
   }
 
   .container {
-    margin: auto;
+    margin: auto !important;
     flex-direction: column;
   }
 
   #miles {
     height: 50px;
-    width: 270px !important;
-    padding-left: 30px;
-    margin-left: -10px;
+    width: 80% !important;
   }
 
   .selectInput {
@@ -123,10 +126,8 @@ margin-left:-30px !important;
   }
 
   .select_join {
-    padding-left: 30px;
-    margin-left: -10px;
     font-size: 20px;
-    width: 270px !important;
+    width: 80% !important;
     height: 50px;
   }
 
@@ -136,13 +137,13 @@ margin-left:-30px !important;
   }
 
   .textMargin2 {
-    width: 280px !important;
+    width: 80% !important;
+    padding-left: 7px !important;
   }
 
   .textMargin3 {
-    width:280px !important;
-    padding-left: -20px !important;
-        padding-right: 40px !important;
+    width:80% !important;
+    padding-left: 7px !important;
   }
 
   .textMargin {
@@ -360,7 +361,7 @@ padding-top: 15px !important;
 }
 
 body {
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   -moz-transform-origin: 0 0;
   left: 0;
   font-family: 'AvenirMedium' !important;
