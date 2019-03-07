@@ -194,8 +194,8 @@ function calculationFunction() {
   }
 
 
-  resultAnnual = (userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles) + (1 * temp) //formula to count annual salary
-  resultWeakly = (userInputMiles * 0.5) + (0.03 * userInputMiles) //formula to count weakly salary
+  resultAnnual =( (userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles)) + (1 * temp) //formula to count annual salary
+  resultWeakly = ((userInputMiles * 0.5) + (0.03 * userInputMiles) )//formula to count weakly salary
 
   document.getElementById("cent").innerHTML = (centsTemp*100);
 
@@ -232,9 +232,10 @@ return false;}
 
 //function to animate number count
 function count() {
+
   $('.counter').each(function() {
-
-
+    $(this).stop();
+    $(this).clearQueue();
 
     $(this).prop('Counter', 0).animate({
       Counter: $(this).text()
