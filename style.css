@@ -31,7 +31,36 @@ strong, b {
   }
 }
 
+@media only screen and (min-width: 0px) and (max-width: 320px) and (orientation: landscape) {
+
+
+
+}
+
+
 @media only screen and (min-width: 0px) and (max-width: 823px) and (orientation: landscape) {
+
+
+
+  #miles {
+    width: 80% !important;
+  }
+
+  .select_join {
+    width: 80% !important;
+  }
+
+
+  .textMargin2 {
+    width: 80% !important;
+    padding-left: 7px !important;
+  }
+
+  .textMargin3 {
+    width:80% !important;
+    padding-left: 7px !important;
+  }
+
 
 
   .container {
@@ -42,7 +71,7 @@ strong, b {
 
 .zoomAll{
 
-    zoom:170%;
+    zoom:190%;
 
 
 }
@@ -71,6 +100,8 @@ strong, b {
     border-bottom: 1.5px solid hsla(200, 10%, 50%, 100) !important;
     height: 1.5px !important;
   }
+
+
 
 .textMargin{
 
