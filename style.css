@@ -41,6 +41,19 @@ body{
 @media only screen and (min-width: 0px) and (max-width: 823px) and (orientation: landscape) {
 
 
+  .selectInput{
+
+
+  margin-left:25px;
+  }
+
+  .milesLabel{
+
+  margin-left:25px;
+
+  }
+
+
   body{
      overflow-y: scroll !important;
   }
@@ -147,17 +160,19 @@ justify-content: center !important;
     width: 80% !important;
   }
 
-  .selectInput {
-    left: 30px !important;
-    top: 10px;
-  }
-
   #submitButton {
     padding-top: 7px !important;
   }
 
+  .selectInput {
+    left: 45px !important;
+    top: 10px;
+  }
+
+
+
   .milesLabel {
-    left: 30px !important;
+    left: 45px !important;
     top: 10px;
     padding-left: 5px;
     padding-right: 5px;
@@ -205,6 +220,18 @@ justify-content: center !important;
 }
 
 @media only screen and (min-width: 321px) and (max-width: 360px) and (orientation: portrait) {
+
+  .selectInput{
+
+
+  margin-left:25px;
+  }
+
+  .milesLabel{
+
+  margin-left:25px;
+
+  }
   body{
      overflow-y: scroll !important;
   }
@@ -236,10 +263,19 @@ justify-content: center !important;
   }
 
 
+  .textMargin2 {
+    width: 80% !important;
+    margin-left: 10px !important;
+  }
+
+  .textMargin3 {
+    width: 80% !important;
+    margin-left: 10px !important;
+  }
 
   .textMargin {
     width: 180px;
-    margin-left: -60px
+    margin-left: -30px !important;
   }
 
   .hr {
@@ -256,15 +292,21 @@ justify-content: center !important;
     margin-bottom: 35px !important;
   }
 
-  .textMargin{
-margin-left: -30px !important;
-
-
-  }
 }
 
 @media only screen and (min-width: 361px) and (max-width: 500px) and (orientation: portrait) {
 
+.selectInput{
+
+
+margin-left:35px;
+}
+
+.milesLabel{
+
+margin-left:35px;
+
+}
   body{
      overflow-y: scroll !important;
   }
@@ -519,8 +561,9 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-  outline: 0.25em solid #23548f !important;
-  border-radius: 5px;
+    display: block;
+    border: 4px solid #23548f;
+  border-radius: 15px;
   background-color: #23548f;
   box-shadow: 0 0 0 .7em white inset;
 }
@@ -554,7 +597,7 @@ input[type="radio"]:checked {
 
 .milesLabel {
   position: relative;
-  left: 30px;
+  left: 15px;
   top: 10px;
   padding-left: 5px;
   padding-right: 5px;
@@ -601,7 +644,7 @@ select::-ms-expand {
 .selectInput {
   color: #5c5c5c;
   position: relative;
-  left: 30px;
+  left: 15px;
   top: 10px;
   padding-left: 5px;
   padding-right: 5px;
