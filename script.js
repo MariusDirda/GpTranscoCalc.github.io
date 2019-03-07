@@ -1,6 +1,16 @@
-var tempResult = 0; //temporary variable for outputing 0
 
-var zero = "???";
+//text, numbers, variables configs
+
+
+var tempResult = 0; //temporary variable for outputing 0
+var zero = "???"; // text which is shown on top of column before calculation
+var averageAnnualNumber = 66711;// average annual income
+var averageAnnualText = averageAnnualNumber.toString(); // conversion to string
+
+
+
+
+
 //settings for google chart
 google.charts.load('current', {
   packages: ['corechart'],
@@ -26,14 +36,14 @@ function drawChart() {
       "Your salary", tempResult, '#23548f', zero //annotation text, annual salary variable, color,annual salary variable
     ],
     [
-      "Average salary", 66711, '#5c5c5c', '66711' //annotion text, current annual average, color, current annual evarage
+      "Average salary", averageAnnualNumber, '#5c5c5c', averageAnnualText //annotion text, current annual average, color, current annual evarage
     ]
   ]);
 
   var formatter = new google.visualization.NumberFormat({ // formatter for number type
-    prefix: '$',
-    patern: 'short',
-    fractionDigits :'0'
+    prefix: '$', //dollar sign before numbers
+    patern: 'short', //type of patern
+    fractionDigits: '0' // removing decimals
   });
   formatter.format(data, 1);
   formatter.format(data, 3);
@@ -80,7 +90,7 @@ function drawChart() {
 
     vAxis: {
 
-      fractionDigits:['0'],
+      fractionDigits: ['0'],
       viewWindow: {
         max: maxV, //maximum value of annotations + 1
       },
@@ -194,10 +204,10 @@ function calculationFunction() {
   }
 
 
-  resultAnnual =( (userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles)) + (1 * temp) //formula to count annual salary
-  resultWeakly = ((userInputMiles * 0.5) + (0.03 * userInputMiles) )//formula to count weakly salary
+  resultAnnual = ((userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles)) + (1 * temp) //formula to count annual salary
+  resultWeakly = ((userInputMiles * 0.5) + (0.03 * userInputMiles)) //formula to count weakly salary
 
-  document.getElementById("cent").innerHTML = (centsTemp*100);
+  document.getElementById("cent").innerHTML = (centsTemp * 100);
 
   document.getElementById("resultWeeks").innerHTML = resultWeakly; // weakly result output to html
 
@@ -205,7 +215,7 @@ function calculationFunction() {
 
   tempResult = 0 + resultAnnual; //temporary result  for chart
 
-zero = tempResult;
+  zero = tempResult;
 
   drawChart();
 
@@ -221,12 +231,14 @@ zero = tempResult;
 
 function scroll() {
 
-  if (  $(window).width() <= 500){
-  $('html, body').animate({
-    scrollTop: ($('#scrollHere').offset().top)
-  }, 500);}
+  if ($(window).width() <= 500) {
+    $('html, body').animate({
+      scrollTop: ($('#scrollHere').offset().top)
+    }, 500);
+  }
 
-return false;}
+  return false;
+}
 
 
 
@@ -254,7 +266,8 @@ function count() {
   function commaSeparateNumber(val) {
 
     while (/(\d+)(\d{3})/.test(val.toString())) {
-        val = val.toString().replace(/(\d+)(\d{3})/, '$1,$2');
-      }
-      return val;
-}}
+      val = val.toString().replace(/(\d+)(\d{3})/, '$1,$2');
+    }
+    return val;
+  }
+}
