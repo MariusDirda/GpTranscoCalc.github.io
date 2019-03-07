@@ -1,10 +1,9 @@
-
 //text, numbers, variables configs
 
 
 var tempResult = 0; //temporary variable for outputing 0
 var zero = "???"; // text which is shown on top of column before calculation
-var averageAnnualNumber = 66711;// average annual income
+var averageAnnualNumber = 66711; // average annual income
 var averageAnnualText = averageAnnualNumber.toString(); // conversion to string
 
 
@@ -235,15 +234,14 @@ function scroll() {
     $('html, body').animate({
       scrollTop: ($('#scrollHere').offset().top)
     }, 500);
+  } else if ($(window).height() <= 500) {
+
+    $('html, body').animate({
+      scrollTop: ('1420px')
+    }, 500);
+
+
   }
-else if ( $(window).height() <= 500){
-
-  $('html, body').animate({
-  scrollTop: ('1420px')
-  }, 500);
-
-
-}
 
 
   return false;
