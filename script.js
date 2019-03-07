@@ -145,15 +145,15 @@ function check() {
 
   //checking if valid number entered on enter button
   $("#miles").keypress(function(eventListen) {
-    var milesInput = document.getElementById('miles').value;
-    var hiddenAlert = document.getElementById("hide");
+    var milesInput = document.getElementById('miles').value; // get value from miles
+    var hiddenAlert = document.getElementById("hide"); // alert field
 
     var eventListen = eventListen || window.event;
 
-    if (eventListen.which == 13 && milesInput < 2000 != milesInput > 3300) {
+    if (eventListen.which == 13 && milesInput < 2000 != milesInput > 3300) { // if input is invalid and pressed enter
       hiddenAlert.style.display = "block";
       return false;
-    } else if (eventListen.which == 13) {
+    } else if (eventListen.which == 13) { // if input is valid and pressed enter
       hiddenAlert.style.display = "none";
       calculationFunction();
       count();
@@ -165,18 +165,18 @@ function check() {
   });
 
   //checking if valid number entered on button click
-  document.getElementById("submitButton").onclick = function() {
-    var milesInput = document.getElementById('miles').value;
-    var hiddenAlert = document.getElementById("hide");
+  document.getElementById("submitButton").onclick = function() { // on click function for submit button id
+    var milesInput = document.getElementById('miles').value; // get value from miles
+    var hiddenAlert = document.getElementById("hide"); // alert field
     if (milesInput < 2000 != milesInput > 3300) {
 
-      hiddenAlert.style.display = "block";
+      hiddenAlert.style.display = "block"; // show alert field if number is not valid
       return false;
     } else {
       calculationFunction();
       count();
       scroll();
-      hiddenAlert.style.display = "none";
+      hiddenAlert.style.display = "none"; // dont show alert if number is correct
       return false;
     }
 
@@ -193,20 +193,20 @@ function calculationFunction() {
   var userInputMiles = document.getElementById("miles").value; //getting values from input
 
   //radio buttons output
-  if (document.getElementById('radioChecked').checked) {
+  if (document.getElementById('radioChecked').checked) { // if checked Yes
     temp = 400;
-    centsTemp = 0.53;
+    centsTemp = 0.53; //cents per mile if checked Yes
 
-  } else if (document.getElementById('radioUnchecked').checked) {
+  } else if (document.getElementById('radioUnchecked').checked) { // if checked No
     temp = 0;
-    centsTemp = 0.5;
+    centsTemp = 0.5; // cents per mile if checked NO
   }
 
 
   resultAnnual = ((userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles)) + (1 * temp) //formula to count annual salary
   resultWeakly = ((userInputMiles * 0.5) + (0.03 * userInputMiles)) //formula to count weakly salary
 
-  document.getElementById("cent").innerHTML = (centsTemp * 100);
+  document.getElementById("cent").innerHTML = (centsTemp * 100); // cents per mile output for text
 
   document.getElementById("resultWeeks").innerHTML = resultWeakly; // weakly result output to html
 
@@ -216,7 +216,7 @@ function calculationFunction() {
 
   zero = tempResult;
 
-  drawChart();
+  drawChart(); // redraw chart after calculation
 
 
   return false;
@@ -224,17 +224,13 @@ function calculationFunction() {
 
 
 //function so scroll to result
-
-
-
-
 function scroll() {
 
-  if ($(window).width() <= 823 && $(window).height() >= 500) {
+  if ($(window).width() <= 823 && $(window).height() >= 500) { // scroll if width is less than 823 and height is more than
     $('html, body').animate({
       scrollTop: ($('#scrollHere').offset().top)
-    }, 500);
-  } else if ($(window).height() <= 500) {
+    }, 500); // scroll animation speed
+  } else if ($(window).height() <= 500) {// do something if screen height is less than 500
 }
 
 
@@ -255,10 +251,10 @@ function count() {
       Counter: $(this).text()
     }, { //counter animation options
       duration: 1000,
-      easing: 'swing',
+      easing: 'swing', // animation type
 
       step: function(now) {
-        $(this).text(commaSeparateNumber(Math.ceil(now)));
+        $(this).text(commaSeparateNumber(Math.ceil(now))); // commas
       }
     });
   });
