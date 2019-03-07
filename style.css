@@ -20,13 +20,44 @@ strong, b {
   font-style: normal;
 }
 
-@media only screen and (min-width: 769px) and (max-width: 823px) and (orientation: landscape) {
+@media only screen and (min-width: 737px) and (max-width: 823px) and (orientation: landscape) {
   body {
     overflow-y: hidden !important;
   }
 
-  .zoomAll {
-    zoom: 210% !important;
+  #miles {
+    width: 80% !important;
+  }
+
+  .select_join {
+    width: 80% !important;
+  }
+
+.tM{
+padding-right: 16px !important;
+
+}
+
+  .textMargin2 {
+    width: 80% !important;
+    margin-left: 10px !important;
+  }
+
+  .textMargin3 {
+    width: 80% !important;
+    margin-left: 50px !important;
+  }
+
+  #hide {
+    margin-left: 15px !important;
+  }
+
+  .selectInput {
+    margin-left: 70px !important;
+  }
+
+  .milesLabel {
+    margin-left: 70px !important;
   }
 
   .mid {
@@ -34,7 +65,7 @@ strong, b {
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 823px) and (orientation: landscape) {
+@media only screen and (min-width: 0px) and (max-width: 736px) and (orientation: landscape) {
   #hide {
     margin-left: 15px !important;
   }
@@ -73,12 +104,6 @@ strong, b {
     margin: auto !important;
     justify-content: center;
     flex-direction: column !important;
-  }
-
-  .zoomAll {
-    /* -moz-transform-origin: 0 0;
-    -moz-transform: scale(1.9);
-    zoom: 190%; */
   }
 
   .mid {
