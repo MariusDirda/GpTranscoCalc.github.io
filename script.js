@@ -250,7 +250,7 @@ function count() {
     $(this).prop('Counter', 0).animate({
       Counter: $(this).text()
     }, { //counter animation options
-      duration: 1000,
+      duration: 780,
       easing: 'swing', // animation type
 
       step: function(now) {
