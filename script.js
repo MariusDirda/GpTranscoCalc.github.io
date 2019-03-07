@@ -224,7 +224,9 @@ function scroll() {
   if (  $(window).width() <= 500){
   $('html, body').animate({
     scrollTop: ($('#scrollHere').offset().top)
-  }, 500);}}
+  }, 500);}
+
+return false;}
 
 
 
