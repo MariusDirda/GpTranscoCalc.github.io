@@ -48,9 +48,6 @@ padding-right: 16px !important;
     margin-left: 50px !important;
   }
 
-  #hide {
-    margin-left: 15px !important;
-  }
 
   .selectInput {
     margin-left: 70px !important;
@@ -63,12 +60,14 @@ padding-right: 16px !important;
   .mid {
     margin: auto;
   }
+
+  #hide {
+    margin-left: 60px !important;
+  }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 736px) and (orientation: landscape) {
-  #hide {
-    margin-left: 15px !important;
-  }
+
 
   .selectInput {
     margin-left: 50px;
@@ -134,6 +133,10 @@ padding-right: 16px !important;
 
   .textMargin {
     margin-left: -30px !important;
+  }
+
+  #hide {
+    margin-left: 40px !important;
   }
 }
 
