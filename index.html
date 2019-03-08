@@ -1,144 +1,144 @@
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="reset.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 
 
-</head>
+  </head>
 
-<body onload="check(); return false;">
-  <div class="container">
-    <div class="zoomAll">
-      <div class="row flex-wrap flex-md-nowrap">
-        <div class=" col-lg-4 ">
-          <div class="mid">
-            <div id="driveMiles" class="textPD row  justify-content-center textMargin2 ">How many miles would you like to drive each week?</div>
-            <span class="milesLabel selectTextColor   justify-content-center">
-              Miles</span>
-            <div class="row  justify-content-center ">
-              <input type="number" name="miles-input" id="miles" value="3000" />
+  <body onload="check(); return false;">
+    <div class="container">
+      <div class="zoomAll">
+        <div class="row flex-wrap flex-md-nowrap">
+          <div class=" col-lg-4 ">
+            <div class="mid">
+              <div id="driveMiles" class="textPD row  justify-content-center textMargin2 ">How many miles would you like to drive each week?</div>
+              <span class="milesLabel selectTextColor   justify-content-center">
+                Miles</span>
+              <div class="row  justify-content-center ">
+                <input type="number" name="miles-input" id="miles" value="3000" />
+              </div>
+              <div id="hide" class="" role="alert">
+                Please enter valid number between 2000 and 3300
+                <!-- error message text -->
+              </div>
+
+
+
+              <div class="textPD row  justify-content-center textMargin2 tM" >How many days would you like to drive in a week? </div>
+
+              <span class="selectInput selectTextColor selectText ">
+                Days</span>
+              <div class="row  justify-content-center ">
+                <select name="radio-button" class="select_join ">
+                  <option value="1" class="selectTextColor">4</option>
+                  <option value="2" class="selectTextColor" selected="selected">5</option>
+                  <option value="3" class="selectTextColor">6</option>
+                </select>
+              </div>
+
+              <div class="textPD row justify-content-start textPD textMargin3">Would you be able to get 2 clean DOT inspections and no accidents after 1st year?</div>
             </div>
-            <div id="hide" class="" role="alert">
-              Please enter valid number between 2000 and 3300
-              <!-- error message text -->
+            <div class="RadioButtons row justify-content-center">
+
+              <div><input type="radio" name="DOT" id="radioChecked" checked="checked"></div>
+              <div class="DOT radioSpace">Yes</div>
+              <div><input type="radio" name="DOT" id="radioUnchecked"></div>
+              <div class="DOT"> No</div>
+            </div>
+            <div class="row justify-content-center">
+              <input type="button" name="submit" id="submitButton" value="CALCULATE" />
+            </div>
+
+          </div>
+
+
+
+          <hr class="hr ">
+
+          <div class="col-lg-3">
+            <div class="counting">
+              <div class="row justify-content-center" id="scrollHere">
+                <span class="textPD textMargin">
+
+                  Your early salary at GP Transco is:
+                </span>
+              </div>
+              <div class="row justify-content-center">
+                <span class="salaryNumbers salaryNumbersText">$
+                  <b> <span class="counter" name="res" id="resultAnnual">0</span></b>
+                </span>
+
+              </div>
+
+              <div class="row justify-content-center">
+                <span class="textPD textMargin textMargin23">
+
+                  Your pay per mile at GP Transco is:
+                </span>
+              </div>
+
+              <div class="row justify-content-center">
+                <span class="salaryNumbers salaryNumbersText ">
+                  <b><span class="counter" id="cent" style="margin-right:10px;">0</span></b>
+                  cents/mile
+                </span>
+              </div>
+
+              <div class="row justify-content-center">
+                <span class=" textPD textMargin">
+
+                  Your weekly pay at GP Transco is:
+                </span>
+
+              </div>
+              <div class="row justify-content-center">
+                <span class="salaryNumbers salaryNumbersText">$
+                  <b> <span class="counter" id="resultWeeks">0<span></span></b>
+              </div>
+            </div>
+          </div>
+
+
+
+          <hr class="hr">
+
+          <div class="col-lg-3">
+
+            <div class="row justify-content-center">
+              <div class="textPD textLets justify-content-center">Let's compare</div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div id="columnchart"></div> <!--  google chart div -->
             </div>
 
 
-
-            <div class="textPD row  justify-content-center textMargin2 tM" >How many days would you like to drive in a week? </div>
-
-            <span class="selectInput selectTextColor selectText ">
-              Days</span>
-            <div class="row  justify-content-center ">
-              <select name="radio-button" class="select_join ">
-                <option value="1" class="selectTextColor">4</option>
-                <option value="2" class="selectTextColor" selected="selected">5</option>
-                <option value="3" class="selectTextColor">6</option>
-              </select>
+            <div class="row justify-content-center">
+              <img class="image" src="https://application.gptransco.com/GP_logo.png">
+              <span class="average">
+                National
+                <br>
+                Average
+              </span>
             </div>
+          </div>
 
-            <div class="textPD row justify-content-start textPD textMargin3">Would you be able to get 2 clean DOT inspections and no accidents after 1st year?</div>
-          </div>
-          <div class="RadioButtons row justify-content-center">
 
-            <div><input type="radio" name="DOT" id="radioChecked" checked="checked"></div>
-            <div class="DOT radioSpace">Yes</div>
-            <div><input type="radio" name="DOT" id="radioUnchecked"></div>
-            <div class="DOT"> No</div>
-          </div>
-          <div class="row justify-content-center">
-            <input type="button" name="submit" id="submitButton" value="CALCULATE" />
-          </div>
+
+
 
         </div>
-
-
-
-        <hr class="hr ">
-
-        <div class="col-lg-3">
-          <div class="counting">
-            <div class="row justify-content-center" id="scrollHere">
-              <span class="textPD textMargin">
-
-                Your early salary at GP Transco is:
-              </span>
-            </div>
-            <div class="row justify-content-center">
-              <span class="salaryNumbers salaryNumbersText">$
-                <b> <span class="counter" name="res" id="resultAnnual">0</span></b>
-              </span>
-
-            </div>
-
-            <div class="row justify-content-center">
-              <span class="textPD textMargin textMargin23">
-
-                Your pay per mile at GP Transco is:
-              </span>
-            </div>
-
-            <div class="row justify-content-center">
-              <span class="salaryNumbers salaryNumbersText ">
-                <b><span class="counter" id="cent" style="margin-right:10px;">0</span></b>
-                cents/mile
-              </span>
-            </div>
-
-            <div class="row justify-content-center">
-              <span class=" textPD textMargin">
-
-                Your weekly pay at GP Transco is:
-              </span>
-
-            </div>
-            <div class="row justify-content-center">
-              <span class="salaryNumbers salaryNumbersText">$
-                <b> <span class="counter" id="resultWeeks">0<span></span></b>
-            </div>
-          </div>
-        </div>
-
-
-
-        <hr class="hr">
-
-        <div class="col-lg-3">
-
-          <div class="row justify-content-center">
-            <div class="textPD textLets justify-content-center">Let's compare</div>
-          </div>
-
-          <div class="row justify-content-center">
-            <div id="columnchart"></div> <!--  google chart div -->
-          </div>
-
-
-          <div class="row justify-content-center">
-            <img class="image" src="https://application.gptransco.com/GP_logo.png">
-            <span class="average">
-              National
-              <br>
-              Average
-            </span>
-          </div>
-        </div>
-
-
-
-
-
       </div>
     </div>
-  </div>
 
-</body>
+  </body>
 
-</html>
+  </html>
