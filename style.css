@@ -397,7 +397,7 @@ padding-right: 16px !important;
 }
 
 
-@media only screen and (min-width: 361px) and (max-device-width: 501) and (orientation: portrait)and (-webkit-min-device-pixel-ratio: 3)  {
+@media only screen and (min-device-width: 361px) and (max-device-width: 501) and (orientation: portrait)  {
   #hide {
     margin-left: 25px !important;
   }
