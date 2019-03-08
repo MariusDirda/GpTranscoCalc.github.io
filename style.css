@@ -502,9 +502,22 @@ padding-right: 16px !important;
     margin-bottom: 35px !important;
   }
 }
+@media only screen  and (min-device-width: 501px) and (max-device-width: 800px) and (lanscape: portrait) {
 
 
-@media only screen  and (min-device-width: 361px) and (max-device-width: 800px) and (lanscape: portrait) {
+
+  .selectInput {
+    margin-left: 0px;
+  }
+
+  .milesLabel {
+    margin-left: 0px;
+  }
+
+}
+
+
+@media only screen  and (min-device-width: 361px) and (max-device-width: 500px) and (lanscape: portrait) {
 
 
 
