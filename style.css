@@ -78,7 +78,7 @@ padding-right: 16px !important;
   }
 
   body {
-    overflow-y: scroll !important;
+    overflow-y: hidden !important;
   }
 
   #miles {
@@ -146,7 +146,7 @@ padding-right: 16px !important;
   }
 
   body {
-    overflow-y:inherit!important;
+    overflow-y:hidden!important;
   }
 
   .mid {
@@ -593,9 +593,6 @@ input[type="radio"]:checked {
   color: #5c5c5c;
 }
 
-.overflowing {
-  overflow: auto !important;
-}
 
 .milesLabel {
   position: relative;
