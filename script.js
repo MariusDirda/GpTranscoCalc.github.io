@@ -1,6 +1,7 @@
 //variable data
 var tempResult = 0; //temporary variable for outputing 0
 var yourTextTemp = "???"; // text which is shown on top of column before calculation
+var nationalTextTemp = '$66,711' ; // national average text on start
 var nationalPay = 0.427635; // current national pay cents/mile
 var centsYes = 0.53; // cents/mile if pressed yes
 var centsNo = 0.5; // cents/mile if pressed no
@@ -10,8 +11,7 @@ var defaultValue = 3000; // value for calculation on starting chart bar
 var nationalTemp = defaultValue * 52 * nationalPay; //  calculation for default average values
 
 
-var nationalTextTemp = nationalTemp.toString(); // converting to string
-var nationalTextTemp = nationalTemp.toFixed(0); // removing decimals from string
+
 
 
 
