@@ -415,15 +415,15 @@ padding-right: 16px !important;
 
 
   #hide {
-    margin-left: 15px !important;
+    margin-left: 25px !important;
   }
 
   .selectInput {
-    margin-left: -5px;
+    margin-left: 35px;
   }
 
   .milesLabel {
-    margin-left: -5px;
+    margin-left: 35px;
   }
 
   body {
@@ -509,15 +509,15 @@ padding-right: 16px !important;
 
 
   #hide {
-    margin-left: 25px !important;
+    margin-left: 15px !important;
   }
 
   .selectInput {
-    margin-left: 35px;
+    margin-left: -5px;
   }
 
   .milesLabel {
-    margin-left: 35px;
+    margin-left: -55px;
   }
 
   body {
