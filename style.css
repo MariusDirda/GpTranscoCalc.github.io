@@ -507,11 +507,11 @@ padding-right: 16px !important;
 
 
   .selectInput {
-    margin-left: 0px;
+    margin-left: -10px;
   }
 
   .milesLabel {
-    margin-left: 0px;
+    margin-left: -10px;
   }
 
 }
