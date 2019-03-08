@@ -419,11 +419,11 @@ padding-right: 16px !important;
   }
 
   .selectInput {
-    margin-left: 15px;
+    margin-left: 0px;
   }
 
   .milesLabel {
-    margin-left: 15px;
+    margin-left: 0px;
   }
 
   body {
@@ -470,7 +470,7 @@ padding-right: 16px !important;
   }
 
   .RadioButtons {
-    padding-left: 46px !important;
+    margin-left: 40px !important;
     align-items: center !important;
   }
 
