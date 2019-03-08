@@ -316,7 +316,8 @@ padding-right: 16px !important;
   }
 }
 
-@media only screen and (min--moz-device-pixel-ratio:2) and (min-width: 361px) and (max-width: 500px) and (orientation: portrait) {
+@media only screen  and (min-width: 361px) and (max-width: 500px) and (orientation: portrait) {
+
 
 
   #hide {
@@ -400,7 +401,7 @@ padding-right: 16px !important;
     border: none !important;
     border-bottom: 1.5px solid hsla(200, 10%, 50%, 100) !important;
     height: 1.5px !important;
-    width: 340px !important;
+    width: 90% !important;
   }
 
   .salaryNumbers {
