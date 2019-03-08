@@ -146,7 +146,7 @@ padding-right: 16px !important;
   }
 
   body {
-    overflow-y: hidden !important;
+    overflow-y:inherit!important;
   }
 
   .mid {

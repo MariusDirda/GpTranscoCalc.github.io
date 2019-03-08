@@ -236,19 +236,19 @@ function calculationFunction() {
 
 
 //function so scroll to result
-function scroll() {
-
-  if ($(window).width() <= 823 && $(window).height() >= 500) { // scroll if width is less than 823 and height is more than
-    $('html, body').animate({
-      scrollTop: ($('#scrollHere').offset().top)
-    }, 500); // scroll animation speed
-  } else if ($(window).height() <= 500) { // do something if screen height is less than 500
-  }
-
-
-
-  return false;
-}
+// function scroll() {
+//
+//   if ($(window).width() <= 823 && $(window).height() >= 500) { // scroll if width is less than 823 and height is more than
+//     $('html, body').animate({
+//       scrollTop: ($('#scrollHere').offset().top)
+//     }, 500); // scroll animation speed
+//   } else if ($(window).height() <= 500) { // do something if screen height is less than 500
+//   }
+//
+//
+//
+//   return false;
+// }
 
 
 
