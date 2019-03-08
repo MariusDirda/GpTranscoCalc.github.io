@@ -64,6 +64,16 @@ padding-right: 16px !important;
   #hide {
     margin-left: 60px !important;
   }
+
+  .hr {
+    width: 90% !important;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    border: none !important;
+    border-bottom: 1.5px solid hsla(200, 10%, 50%, 100) !important;
+    height: 1.5px !important;
+  }
+
 }
 
 @media only screen and (min-width: 0px) and (max-width: 736px) and (orientation: landscape) {
@@ -396,10 +406,9 @@ padding-right: 16px !important;
   }
 }
 
-
-@media only screen and (min--moz-device-pixel-ratio: 2) (max--moz-device-pixel-ratio: 2) and (orientation: portrait)  {
+@media only screen and (min-width: 501px) and (max-width: 768px) and (orientation: portrait) {
   #hide {
-    margin-left: 25px !important;
+    margin-left: 40px !important;
   }
 
   .selectInput {
@@ -413,6 +422,7 @@ padding-right: 16px !important;
   body {
     overflow-y: hidden !important;
   }
+
 
   .mid {
     padding-left: 20px;
@@ -428,12 +438,12 @@ padding-right: 16px !important;
 
   .textMargin2 {
     width: 80% !important;
-    margin-left: 13px !important;
+    margin-left: 33px !important;
   }
 
   .textMargin3 {
     width: 80% !important;
-    margin-left: 15px !important;
+    margin-left: 33px !important;
   }
 
   .textMargin {
@@ -442,35 +452,17 @@ padding-right: 16px !important;
   }
 
   .image {
-    margin-left: -20px !important;
-    padding-top: -10px;
-    height: 45px !important;
-    width: auto !important;
+
   }
 
   .average {
-    padding-top: 10px;
-    margin-left: 0 !important;
+
   }
 
-  .RadioButtons {
-    padding-left: 46px !important;
-    align-items: center !important;
-  }
 
-  .container {
-    margin: auto;
-    flex-direction: column;
-    overflow: hidden !important;
-    min-width: 100% !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  }
 
-  .textMargin {
-    width: 80% !important;
-    margin-left: -30px !important
-  }
+
+
 
   .hr {
     display: flex !important;
@@ -479,13 +471,14 @@ padding-right: 16px !important;
     border: none !important;
     border-bottom: 1.5px solid hsla(200, 10%, 50%, 100) !important;
     height: 1.5px !important;
-    width: 340px !important;
+    width: 90% !important;
   }
 
-  .salaryNumbers {
-    margin-bottom: 35px !important;
-  }
+
 }
+
+
+
 
 @media only screen and (min-width: 501px) and (max-width: 768px) and (orientation: portrait) {
   body {
