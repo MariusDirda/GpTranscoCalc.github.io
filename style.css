@@ -397,7 +397,7 @@ padding-right: 16px !important;
 }
 
 
-@media only screen and (min-resolution: 330dpi) and (max-width: 577dpi) and (   min--moz-device-pixel-ratio: 2) and (orientation: portrait)  {
+@media only screen and (min-resolution: 330dpi) and (max-resolution: 577dpi) and (   min--moz-device-pixel-ratio: 2) and (orientation: portrait)  {
   #hide {
     margin-left: 25px !important;
   }
