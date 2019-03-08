@@ -1,12 +1,10 @@
-//text, numbers, variables configs
-
-
 var tempResult = 0; //temporary variable for outputing 0
-var zero = "???"; // text which is shown on top of column before calculation
-var averageAnnualNumber = 66711; // average annual income
-var averageAnnualText = averageAnnualNumber.toString(); // conversion to string
+var yourTextTemp = "???"; // text which is shown on top of column before calculation
+var nationalPay = 0.427635; // current national pay cents/mile
 
-
+var nationalTemp = 3000 * 52 * nationalPay;//  calculation for default average values
+var nationalTextTemp = nationalTemp.toString(); // converting to string
+var nationalTextTemp = nationalTemp.toFixed(0);// removing decimals from string
 
 
 
@@ -32,10 +30,10 @@ function drawChart() {
       }
     ],
     [
-      "Your salary", tempResult, '#23548f', zero //annotation text, annual salary variable, color,annual salary variable
+      "Your salary", tempResult, '#23548f', yourTextTemp //annotation text, annual salary variable, color,annual salary variable
     ],
     [
-      "Average salary", averageAnnualNumber, '#5c5c5c', averageAnnualText //annotion text, current annual average, color, current annual evarage
+      "Average salary", nationalTemp, '#5c5c5c', nationalTextTemp //annotion text, current annual average, color, current annual evarage
     ]
   ]);
 
@@ -83,13 +81,11 @@ function drawChart() {
     },
 
     hAxis: {
-      format: ['0.00'], // the type of numbers used
+   // the type of numbers used
       textPosition: 'none'
     },
 
     vAxis: {
-
-      fractionDigits: ['0'],
       viewWindow: {
         max: maxV, //maximum value of annotations + 1
       },
@@ -98,7 +94,7 @@ function drawChart() {
       },
 
       ticks: [
-        40000, 80000, 100000 //chart baselines
+        20000,40000, 80000, 100000 //chart baselines
       ],
       textPosition: 'none'
     },
@@ -203,6 +199,10 @@ function calculationFunction() {
   }
 
 
+  resultNational = (userInputMiles * 52 * nationalPay)
+
+resultNationalText = resultNational.toString();
+
   resultAnnual = ((userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles)) + (1 * temp) //formula to count annual salary
   resultWeakly = ((userInputMiles * 0.5) + (0.03 * userInputMiles)) //formula to count weakly salary
 
@@ -214,7 +214,12 @@ function calculationFunction() {
 
   tempResult = 0 + resultAnnual; //temporary result  for chart
 
-  zero = tempResult;
+nationalTemp = 0 + resultNational;
+
+  yourTextTemp = tempResult;
+
+nationalTextTemp = nationalTemp;
+
 
   drawChart(); // redraw chart after calculation
 
