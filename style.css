@@ -316,7 +316,7 @@ padding-right: 16px !important;
   }
 }
 
-@media  all  and (min-width: 361px) and (max-width: 500px) and (orientation: portrait) {
+@media  screen  and (min-width: 361px) and (max-width: 500px) and (orientation: portrait) {
 
 
 
@@ -410,7 +410,7 @@ padding-right: 16px !important;
 }
 
 
-@media only screen  and (min-width: 361px) and (max-width: 500px) and (orientation: portrait) {
+@media only screen  and (min-device-width: 361px) and (max-device-width: 500px) and (orientation: portrait) {
 
 
 
