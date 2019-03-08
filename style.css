@@ -76,7 +76,7 @@ padding-right: 16px !important;
 
 }
 
-@media only screen and (min-width: 0px) and (max-width: 736px) and (orientation: landscape) {
+@media only screen and (min-width: 0px) and (max-width: 750px) and (orientation: landscape) {
 
 
   .selectInput {
