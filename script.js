@@ -1,10 +1,17 @@
+//variable data
 var tempResult = 0; //temporary variable for outputing 0
 var yourTextTemp = "???"; // text which is shown on top of column before calculation
 var nationalPay = 0.427635; // current national pay cents/mile
+var centsYes = 0.53; // cents/mile if pressed yes
+var centsNo = 0.5; // cents/mile if pressed no
+var defaultValue = 3000; // value for calculation on starting chart bar
 
-var nationalTemp = 3000 * 52 * nationalPay;//  calculation for default average values
+
+var nationalTemp = defaultValue * 52 * nationalPay; //  calculation for default average values
+
+
 var nationalTextTemp = nationalTemp.toString(); // converting to string
-var nationalTextTemp = nationalTemp.toFixed(0);// removing decimals from string
+var nationalTextTemp = nationalTemp.toFixed(0); // removing decimals from string
 
 
 
@@ -81,7 +88,7 @@ function drawChart() {
     },
 
     hAxis: {
-   // the type of numbers used
+      // the type of numbers used
       textPosition: 'none'
     },
 
@@ -94,7 +101,7 @@ function drawChart() {
       },
 
       ticks: [
-        20000,40000, 80000, 100000 //chart baselines
+        20000, 40000, 80000, 100000 //chart baselines
       ],
       textPosition: 'none'
     },
@@ -191,17 +198,17 @@ function calculationFunction() {
   //radio buttons output
   if (document.getElementById('radioChecked').checked) { // if checked Yes
     temp = 400;
-    centsTemp = 0.53; //cents per mile if checked Yes
+    centsTemp = centsYes //cents per mile if checked Yes
 
   } else if (document.getElementById('radioUnchecked').checked) { // if checked No
     temp = 0;
-    centsTemp = 0.5; // cents per mile if checked NO
+    centsTemp = centsNo; // cents per mile if checked NO
   }
 
 
   resultNational = (userInputMiles * 52 * nationalPay)
 
-resultNationalText = resultNational.toString();
+  resultNationalText = resultNational.toString();
 
   resultAnnual = ((userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles)) + (1 * temp) //formula to count annual salary
   resultWeakly = ((userInputMiles * 0.5) + (0.03 * userInputMiles)) //formula to count weakly salary
@@ -214,11 +221,11 @@ resultNationalText = resultNational.toString();
 
   tempResult = 0 + resultAnnual; //temporary result  for chart
 
-nationalTemp = 0 + resultNational;
+  nationalTemp = 0 + resultNational;
 
   yourTextTemp = tempResult;
 
-nationalTextTemp = nationalTemp;
+  nationalTextTemp = nationalTemp;
 
 
   drawChart(); // redraw chart after calculation
@@ -235,8 +242,8 @@ function scroll() {
     $('html, body').animate({
       scrollTop: ($('#scrollHere').offset().top)
     }, 500); // scroll animation speed
-  } else if ($(window).height() <= 500) {// do something if screen height is less than 500
-}
+  } else if ($(window).height() <= 500) { // do something if screen height is less than 500
+  }
 
 
 
