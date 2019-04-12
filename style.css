@@ -21,6 +21,47 @@ strong, b {
 }
 
 @media only screen and (min-width: 737px) and (max-width: 823px) and (orientation: landscape) {
+
+  .rb1,
+  .rb2,
+  .rb3,
+  .rb4,
+  .rb5,
+  .rb6{
+  margin-left: 500px !important;
+margin-top: -10px !important;
+  }
+
+
+.rb1{
+  margin-top: -30px !important
+}
+
+.rb2{
+  margin-top: -20px !important
+}
+
+.rb3,.rb4,.rb5{
+  margin-top: -20px !important
+}
+
+.rb6{
+margin-top: -30px !important
+
+}
+
+
+
+    .radioTextWidth{
+      width: 500px !important;
+    }
+
+
+  .marginCheck{
+  margin-left:350px !important;
+  }
+
+
   body {
     overflow-y: hidden !important;
   }
@@ -77,6 +118,48 @@ padding-right: 16px !important;
 }
 
 @media only screen and (min-device-width: 501px) and (max-device-width: 800px) and (orientation: landscape) {
+
+
+  .rb1,
+  .rb2,
+  .rb3,
+  .rb4,
+  .rb5,
+  .rb6{
+  margin-left: 400px !important;
+margin-top: -10px !important;
+  }
+
+
+.rb1{
+  margin-top: -30px !important
+}
+
+.rb2{
+  margin-top: -20px !important
+}
+
+.rb3,.rb4,.rb5{
+  margin-top: -20px !important
+}
+
+.rb6{
+margin-top: -30px !important
+
+}
+
+
+
+    .radioTextWidth{
+      width: 400px !important;
+    }
+
+
+  .marginCheck{
+  margin-left:200px !important;
+  }
+
+
 
 
     .selectInput {
@@ -352,6 +435,28 @@ margin-left: 10px !important;
 }
 
 @media  screen  and (min-width: 361px) and (max-width: 500px) and (orientation: portrait) {
+
+.rb1,
+.rb2,
+.rb3,
+.rb4,
+.rb5,
+.rb6{
+margin-left: 0px !important;
+
+}
+
+
+
+  .radioTextWidth{
+  }
+
+
+.marginCheck{
+margin-left: 30px !important;
+}
+
+
 
   #hide {
     margin-left: 25px !important;
