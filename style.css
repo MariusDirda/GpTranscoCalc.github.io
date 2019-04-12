@@ -169,6 +169,16 @@ padding-right: 16px !important;
     margin-left: 15px !important;
   }
 
+  .radiosize{
+margin-left: -10px !important;
+    }
+
+
+    .radioTextWidth{
+    width:220px !important;
+
+    }
+
   body {
     overflow-y:hidden!important;
   }
@@ -262,6 +272,17 @@ padding-right: 16px !important;
     margin-left: 15px !important;
   }
 
+  .radiosize{
+margin-left: 10px !important;
+    }
+
+
+    .radioTextWidth{
+    width:250px !important;
+
+    }
+
+
   .selectInput {
     margin-left: 25px;
   }
@@ -331,8 +352,6 @@ padding-right: 16px !important;
 }
 
 @media  screen  and (min-width: 361px) and (max-width: 500px) and (orientation: portrait) {
-
-
 
   #hide {
     margin-left: 25px !important;
@@ -421,6 +440,9 @@ padding-right: 16px !important;
   .salaryNumbers {
     margin-bottom: 35px !important;
   }
+
+
+
 }
 
 
@@ -519,98 +541,6 @@ padding-right: 16px !important;
 
 
 
-@media only screen  and (min-device-width: 361px) and (max-device-width: 500px) and (lanscape: portrait) {
-
-
-
-  #hide {
-    margin-left: 15px !important;
-  }
-
-  .selectInput {
-    margin-left: -5px;
-  }
-
-  .milesLabel {
-    margin-left: -5px;
-  }
-
-  body {
-    overflow-y: hidden !important;
-  }
-
-  .mid {
-    padding-left: 20px;
-  }
-
-  #miles {
-    width: 80% !important;
-  }
-
-  .select_join {
-    width: 80% !important;
-  }
-
-  .textMargin2 {
-    width: 80% !important;
-    margin-left: 13px !important;
-  }
-
-  .textMargin3 {
-    width: 80% !important;
-    margin-left: 15px !important;
-  }
-
-  .textMargin {
-    width: 80% !important;
-    margin-left: -20px !important
-  }
-
-  .image {
-    margin-left: -20px !important;
-    padding-top: -10px;
-    height: 45px !important;
-    width: auto !important;
-  }
-
-  .average {
-    padding-top: 10px;
-    margin-left: 0 !important;
-  }
-
-  .RadioButtons {
-    margin-left: 5px !important;
-    align-items: center !important;
-  }
-
-  .container {
-    margin: auto;
-    flex-direction: column;
-    overflow: hidden !important;
-    min-width: 100% !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  }
-
-  .textMargin {
-    width: 80% !important;
-    margin-left: -30px !important
-  }
-
-  .hr {
-    display: flex !important;
-    margin-top: 25px !important;
-    margin-bottom: 25px !important;
-    border: none !important;
-    border-bottom: 1.5px solid hsla(200, 10%, 50%, 100) !important;
-    height: 1.5px !important;
-    width: 90% !important;
-  }
-
-  .salaryNumbers {
-    margin-bottom: 35px !important;
-  }
-}
 
 
 
@@ -712,6 +642,7 @@ body {
 }
 
 #submitButton {
+  margin-top:-35px;
   display: inline-block;
   width: 230px;
   height: 60px;
@@ -722,10 +653,15 @@ body {
   color: white;
 }
 
-#radioChecked,
-#radioUnchecked {
-  height: 50px;
-  width: 50px;
+#radioChecked1,
+#radioUnchecked,
+#radioChecked2,
+#radioChecked3,
+#radioChecked4,
+#radioChecked5,
+#radioChecked6 {
+  height: 25px;
+  width: 25px;
 }
 
 .textBottom {
@@ -772,10 +708,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-input[type="radio"] {
+input[type="checkbox"] {
   background-color: white;
   border: 0.03em solid rgba(255, 255, 255, .5);
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: inset 0 0 0 0.25em #23548f;
   cursor: pointer;
   font: inherit;
@@ -786,12 +722,12 @@ input[type="radio"] {
   -webkit-appearance: none;
 }
 
-input[type="radio"]:checked {
+input[type="checkbox"]:checked {
   display: block;
   border: 4px solid #23548f;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #23548f;
-  box-shadow: 0 0 0 .5em white inset;
+  box-shadow: 0 0 0 .15em white inset;
 }
 
 .salaryNumbers {
@@ -834,7 +770,13 @@ input[type="radio"]:checked {
 }
 
 .textMargin23 {
-  padding-top: 20px;
+  padding-top: 70px;
+}
+
+.textMargin3rd{
+margin-top: 105px;
+
+
 }
 
 .average {
@@ -908,8 +850,8 @@ select::-ms-expand {
 
 .DOT {
   font-size: 20px;
-  margin-right: 50px;
-  margin-left: 10px;
+  /* margin-right: 50px;
+  margin-left: 10px; */
 }
 
 .salaryNumbersText {
@@ -928,10 +870,75 @@ select::-ms-expand {
   margin-bottom: 10px !important;
 }
 
+.radiopad{
+padding-right: 25px;
+margin-left: -70px;
+margin-top: 5px;
+}
+
+.radioButtonsTop{
+  margin-left: -55px;
+  margin-top: -15px;
+}
+
+.radiosize{
+width:300px;
+margin-top: -15px;
+}
+
+.radioTextWidth{
+font-size:15px;
+width:250px;
+  color: #5c5c5c;
+margin-top: 10px;
+margin-left: -10px;
+}
+
+.radioButtonsMargin{
+margin-left: 10px;
+
+}
+
+.radioButtonPlace{
+margin-top: 5px;
+margin-left:15px;
+}
+
+.rb1{
+margin-top:5px;
+}
+
+.rb2{
+margin-top:15px;
+}
+
+.rb3{
+margin-top:10px;
+}
+
+.rb4{
+margin-top:12px;
+}
+
+.rb5{
+margin-top:5px;
+}
+.rb6{
+margin-top:10px;
+}
+
+.chartMargin{
+margin-top: 55px;
+
+
+}
+
+
 .textLets {
   align-content: center;
   width: 100% !important;
 }
+
 
 .textPD {
   display: flex;
@@ -940,3 +947,10 @@ select::-ms-expand {
   font-size: 20px;
   color: #5c5c5c;
 }
+
+
+/* .counting{
+margin-top:100px;
+
+
+} */

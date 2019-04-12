@@ -3,7 +3,7 @@ var tempResult = 0; //temporary variable for outputing 0
 var yourTextTemp = "???"; // text which is shown on top of column before calculation
 var nationalTextTemp = '$66,711' ; // national average text on start
 var nationalPay = 0.427635; // current national pay cents/mile
-var centsYes = 0.53; // cents/mile if pressed yes
+var centsYes = 0.56; // cents/mile if pressed yes
 var centsNo = 0.5; // cents/mile if pressed no
 var defaultValue = 3000; // value for calculation on starting chart bar
 
@@ -80,7 +80,7 @@ function drawChart() {
     },
 
     width: 250, //chart width
-    height: 450, //chart height
+    height: 550, //chart height
 
     legend: 'none',
     bar: {
@@ -196,11 +196,13 @@ function calculationFunction() {
   var userInputMiles = document.getElementById("miles").value; //getting values from input
 
   //radio buttons output
-  if (document.getElementById('radioChecked').checked) { // if checked Yes
+  if ((document.getElementById('radioChecked1').checked) && (document.getElementById('radioChecked2').checked) &&
+(document.getElementById('radioChecked3').checked) && (document.getElementById('radioChecked4').checked) &&
+(document.getElementById('radioChecked5').checked) && (document.getElementById('radioChecked6').checked) ) { // if checked Yes
     temp = 400;
     centsTemp = centsYes //cents per mile if checked Yes
 
-  } else if (document.getElementById('radioUnchecked').checked) { // if checked No
+  } else  { // if checked No
     temp = 0;
     centsTemp = centsNo; // cents per mile if checked NO
   }
@@ -213,7 +215,9 @@ function calculationFunction() {
   resultAnnual = ((userInputMiles * 52 * centsTemp) + (0.03 * centsTemp * userInputMiles)) + (1 * temp) //formula to count annual salary
   resultWeakly = ((userInputMiles * 0.5) + (0.03 * userInputMiles)) //formula to count weakly salary
 
-  document.getElementById("cent").innerHTML = (centsTemp * 100); // cents per mile output for text
+centsCalculated = (centsTemp *100) - 0.01
+
+  document.getElementById("cent").innerHTML = centsCalculated; // cents per mile output for text
 
   document.getElementById("resultWeeks").innerHTML = resultWeakly; // weakly result output to html
 
@@ -234,21 +238,6 @@ function calculationFunction() {
   return false;
 }
 
-
-//function so scroll to result
-// function scroll() {
-//
-//   if ($(window).width() <= 823 && $(window).height() >= 500) { // scroll if width is less than 823 and height is more than
-//     $('html, body').animate({
-//       scrollTop: ($('#scrollHere').offset().top)
-//     }, 500); // scroll animation speed
-//   } else if ($(window).height() <= 500) { // do something if screen height is less than 500
-//   }
-//
-//
-//
-//   return false;
-// }
 
 
 
